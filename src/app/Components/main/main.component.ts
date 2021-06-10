@@ -7,11 +7,13 @@ import { OfertasService } from '../../Services/ofertas.service';
   styleUrls: ['./main.component.sass']
 })
 export class MainComponent implements OnInit {
-
-  constructor(private ofertasService: OfertasService) { }
+public ofertas: any;
+  constructor(private ofertasService: OfertasService) {
+   }
 
   ngOnInit(): void {
-
+    this.ofertas = this.ofertasService.getAllOfertas();
+    console.log(this.ofertas);
   }
 
 }
