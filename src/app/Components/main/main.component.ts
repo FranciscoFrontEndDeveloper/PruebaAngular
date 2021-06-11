@@ -13,7 +13,6 @@ public ofertas: any;
 
   ngOnInit(): void {
     this.ofertas = this.ofertasService.getAllOfertas();
-    console.log(this.ofertas);
   }
 
 }

@@ -9,14 +9,13 @@ import { OfertasService } from '../../Services/ofertas.service';
 export class OfferComponent implements OnInit {
 @Input() ofertas: any;
 public ofertaFiltrada: any[];
-public caracteristicas: any[];
-public caractName: any[];
+
+
 
   constructor(private ofertasService: OfertasService) {
 
     this.ofertaFiltrada = [];
-    this.caracteristicas = [];
-    this.caractName = [];
+
   }
 
   ngOnInit(): void {
