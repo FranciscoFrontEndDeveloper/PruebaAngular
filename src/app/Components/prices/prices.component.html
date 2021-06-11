@@ -1,1 +1,12 @@
-<p>prices works!</p>
+<h3>precios</h3>
+<div >
+  <div class="priceContainer" *ngFor="let product of productOffering.versions[0].productOfferingPrices">
+    <div class="product">
+        {{product.versions[0].name }}
+    </div>
+
+    <div class="amount">
+        {{product.versions[0].price.amount | currency}}
+    </div>
+  </div>
+</div>

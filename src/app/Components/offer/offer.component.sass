@@ -1,8 +1,46 @@
 .offers
   display: grid
   grid-template-columns: auto 1fr
+  grid-template-rows: 1fr 1fr
+  column-gap: 50px
+  grid-template-areas: ''
+  height: 100vh
+.labelOffer
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(2, auto )
+  grid-template-rows: repeat(2,auto)
+  grid-template-areas: 'offer offer' 'charact charact'
+
+.characOffer
+  grid-area: charact
+
+.productOffer
+  grid-area: price
+
+.labelCont
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: repeat(2, auto )
+  grid-template-areas: 'labels labels' 'carac price'
   column-gap: 50px
 
+.labels
+  display: grid
+  grid-template-columns: repeat(2,1fr )
+  grid-template-rows: repeat(2,1fr )
+  grid-area: labels
+  grid-template-areas: 'label1 label2' 'label3 label4'
+  label:nth-child(1)
+    grid-area: label1
+  label:nth-child(2)
+    grid-area: label2
+  label:nth-child(3)
+    grid-area: label3
+  label:nth-child(4)
+    grid-area: label4
+.caracte
+  grid-area: carac
 
-
-
+.price
+  grid-area: price

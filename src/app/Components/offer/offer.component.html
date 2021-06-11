@@ -1,23 +1,22 @@
-<!-- <p>offer works!</p> -->
 <div class="offers">
-  <div>
+  <div class="selectOffer">
     <select (change)="ofertaFilter($event)" >
       <option value="" selected>Selecione una opcion</option>
       <option *ngFor="let oferta of ofertas" [value]="oferta.id">{{oferta.id}}</option>
     </select>
   </div>
-  <div>
-    <div *ngFor="let item of ofertaFiltrada" >
+  <div class="labelCont"   *ngFor="let item of ofertaFiltrada" >
+    <div class="labels">
       <label for="idOferta">Id Oferta</label>
       <label for="">{{item.id}}</label>
       <label for="">Nombre</label>
       <label for="">{{item.versions[0].name}}</label><br>
-      <label for="">{{item.versions[0].characteristics}}</label>
-      <div *ngFor="let item2 of item.versions[0].characteristics">
-        <label for="">{{item2}}</label>
-        <app-characteristics [ofertas]="item2"></app-characteristics>
-      </div>
-      <app-prices [ofertas]="item"></app-prices>
+    </div>
+    <div class="caracte">
+      <app-characteristics [caracteristicas]="item"></app-characteristics>
+    </div>
+    <div class="price">
+      <app-prices [productOffering]="item"></app-prices>
     </div>
   </div>
 

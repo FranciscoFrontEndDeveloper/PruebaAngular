@@ -6,12 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./prices.component.sass']
 })
 export class PricesComponent implements OnInit {
-@Input() ofertas: any;
+
+@Input() productOffering: any = ""
+
   constructor() { }
 
   ngOnInit(): void {
-
-      // console.log(this.ofertas);
   }
-
 }

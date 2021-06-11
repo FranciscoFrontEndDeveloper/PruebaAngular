@@ -6,12 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./characteristics.component.sass']
 })
 export class CharacteristicsComponent implements OnInit {
-@Input() ofertas: any;
+@Input() caracteristicas: any;
   constructor() { }
 
   ngOnInit(): void {
 
-      console.log(this.ofertas);
+
   }
 
 }
