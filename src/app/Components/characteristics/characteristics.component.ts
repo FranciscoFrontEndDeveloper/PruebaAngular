@@ -11,7 +11,7 @@ export class CharacteristicsComponent implements OnInit {
 
   ngOnInit(): void {
 
-      // console.log(this.ofertas);
+      console.log(this.ofertas);
   }
 
 }

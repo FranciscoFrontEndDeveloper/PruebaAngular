@@ -7,16 +7,21 @@
     </select>
   </div>
   <div>
-    <div *ngFor="let item of ofertafiltrada" >
+    <div *ngFor="let item of ofertaFiltrada" >
       <label for="idOferta">Id Oferta</label>
       <label for="">{{item.id}}</label>
       <label for="">Nombre</label>
-      <label for="">{{item.versions[0].name}}</label>
+      <label for="">{{item.versions[0].name}}</label><br>
+      <label for="">{{item.versions[0].characteristics}}</label>
+      <div *ngFor="let item2 of item.versions[0].characteristics">
+        <label for="">{{item2}}</label>
+        <app-characteristics [ofertas]="item2"></app-characteristics>
+      </div>
+      <app-prices [ofertas]="item"></app-prices>
     </div>
   </div>
 
 </div>
-
 
 
 

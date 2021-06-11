@@ -9,11 +9,13 @@ import { OfertasService } from '../../Services/ofertas.service';
 })
 export class OfferComponent implements OnInit {
 @Input() ofertas: any;
-public ofertafiltrada: any[];
+public ofertaFiltrada: any[];
+public caracteristicas: any[];
 // public pruebaid: string;
   constructor(private ofertasService: OfertasService) {
     // this.pruebaid = 'PO_Tec7009695';
-    this.ofertafiltrada = [];
+    this.ofertaFiltrada = [];
+    this.caracteristicas = [];
   }
 
   ngOnInit(): void {
@@ -23,9 +25,11 @@ public ofertafiltrada: any[];
 
   ofertaFilter(offerId: any): any{
     console.log(typeof offerId.target.value);
-    this.ofertafiltrada = this.ofertasService.filterOffer(offerId.target.value);
-    console.log(this.ofertafiltrada);
+    this.ofertaFiltrada = this.ofertasService.filterOffer(offerId.target.value);
+    // console.log(this.ofertafiltrada);
     // console.log(pruebaid);
+
+
   }
 
 
