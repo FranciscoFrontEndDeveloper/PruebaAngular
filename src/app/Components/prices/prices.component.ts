@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-prices',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prices.component.sass']
 })
 export class PricesComponent implements OnInit {
-
+@Input() ofertas: any;
   constructor() { }
 
   ngOnInit(): void {
+
+      // console.log(this.ofertas);
   }
 
 }

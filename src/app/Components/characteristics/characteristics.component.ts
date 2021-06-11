@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-characteristics',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characteristics.component.sass']
 })
 export class CharacteristicsComponent implements OnInit {
-
+@Input() ofertas: any;
   constructor() { }
 
   ngOnInit(): void {
+
+      // console.log(this.ofertas);
   }
 
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Ofertas } from 'src/app/model/ofertas.model';
+import { OfertasService } from '../../Services/ofertas.service';
 
 @Component({
   selector: 'app-offer',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer.component.sass']
 })
 export class OfferComponent implements OnInit {
-
-  constructor() { }
+@Input() ofertas: any;
+public ofertafiltrada: any[];
+// public pruebaid: string;
+  constructor(private ofertasService: OfertasService) {
+    // this.pruebaid = 'PO_Tec7009695';
+    this.ofertafiltrada = [];
+  }
 
   ngOnInit(): void {
+
+      // console.log(this.ofertas);
   }
+
+  ofertaFilter(offerId: any): any{
+    console.log(typeof offerId.target.value);
+    this.ofertafiltrada = this.ofertasService.filterOffer(offerId.target.value);
+    console.log(this.ofertafiltrada);
+    // console.log(pruebaid);
+  }
+
 
 }

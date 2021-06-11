@@ -1,10 +1,14 @@
-<p>main works!</p>
+<!-- <p>main works!</p>
 <ul *ngFor="let oferta of ofertas">
   <li>{{oferta.id}}</li>
-</ul>
+  <ul *ngFor="let caracteristicas of oferta.versions">
+    <li>{{caracteristicas.name}}</li>
+  </ul>
+</ul> -->
 
-
-
+<app-offer [ofertas]="ofertas"></app-offer>
+<!-- <app-characteristics [ofertas]="ofertas"></app-characteristics>
+<app-prices [ofertas]="ofertas"></app-prices> -->
 
 
 
